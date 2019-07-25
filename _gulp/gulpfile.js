@@ -3,7 +3,7 @@
 const gulp = require('gulp'),
       gulpif = require('gulp-if'),
       pug = require('gulp-pug'),
-      emitty = require('emitty').setup('_src/_pug', 'pug'),
+      emitty = require('emitty').setup('_pug', 'pug'),
       plumber = require('gulp-plumber'),
       browserSync = require('browser-sync'),
       scss = require('gulp-sass'),
@@ -35,7 +35,7 @@ gulp.task('emailBuilder', function() {
 gulp.task('pug', () =>
   new Promise((resolve, reject) => {
     emitty.scan(global.emittyChangedFile).then(() => {
-      gulp.src('_src/_pug/*.pug')
+      gulp.src('_pug/*.pug')
         .pipe(plumber())
         .pipe(gulpif(global.watch, emitty.filter(global.emittyChangedFile)))
         .pipe(pug({
@@ -50,7 +50,7 @@ gulp.task('pug', () =>
 
 // Sass
 gulp.task('scss', function () {
-  return gulp.src('_src/_scss/main.scss')
+  return gulp.src('_scss/main.scss')
     .pipe(wait(1500))
     .pipe(plumber())
     .pipe(plugins.sourcemaps.init())
@@ -68,7 +68,7 @@ gulp.task('scss', function () {
 
 // Tinypng
 gulp.task('tiny', function () {
-  return gulp.src('_src/_tinypng/**/*.{png,jpg}')
+  return gulp.src('_tinypng/**/*.{png,jpg}')
     .pipe(tinypng(TINYPNG_API))
     .pipe(gulp.dest('dist/images/tinypng/'))
 });
@@ -104,11 +104,11 @@ gulp.task('critical', function () {
 gulp.task('watch', () => {
   global.watch = true;
 
-  gulp.watch('_src/_pug/**/*.pug', gulp.series('pug'))
+  gulp.watch('_pug/**/*.pug', gulp.series('pug'))
     .on('all', (event, filepath) => {
       global.emittyChangedFile = filepath;
     });
-  gulp.watch('_src/_scss/**/*.scss', gulp.series('scss'));
+  gulp.watch('_scss/**/*.scss', gulp.series('scss'));
   gulp.watch('dist/js/*.js').on("change", browserSync.reload);
   gulp.watch('dist/css/*.css').on('change', browserSync.reload);
   gulp.watch('dist/*.html').on('change', browserSync.reload);
