@@ -20,9 +20,11 @@ html, body {
 body {
   // background-color: alpha(var(--color-primary), 1);
   background: $color-white;
-  font-size: 16px;
-  font-family: $primary-font;
+  font-size: 14px;
+  font-family: $font-montserrat;
+  font-weight: 400;
   color: $primary-color;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
@@ -30,38 +32,42 @@ body {
 //  Typography
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   color: $primary-color;
-  font-weight: bold;
+  font-weight: 400;
   text-decoration: none;
   margin: 0 0 15px 0;
 }
 .h1, h1 {
-  font-size: 21px;
+  font-size: 30px;
   line-height: 1.05;
   letter-spacing: -1px;
   margin-bottom: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 .h2, h2 {
-  font-size: 18px;
+  font-size: 25px;
   line-height: 1.14;
   margin-bottom: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 .h3, h3 {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.38;
 }
 .h4, h4 {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.38;
 }
 .h5, h5 {
-  font-size: 13px;
+  font-size: 16px;
 }
 .h6, h6 {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 small, .small {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.2;
 }
 
@@ -97,6 +103,9 @@ a, .link {
     text-decoration: none;
     outline: none;
   }
+  // &:visited {
+  //   color: #87d2fe;
+  // }
 }
 
 a.link {
