@@ -1,0 +1,43 @@
+// @import "node_modules/normalize-scss/sass/_normalize.scss";
+
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+$theme-colors: (
+  "primary": green,
+  "danger": pink,
+  "custom-color": yellow,
+  "custom-color2": lightblue
+);
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "1-base/_mixin.scss";
+@import "1-base/_variables.scss";
+@import "1-base/_font.scss";
+@import "1-base/_base.scss";
+
+@import "2-layout/_buttons.scss";
+@import "2-layout/_forms.scss";
+@import "2-layout/_menu.scss";
+@import "2-layout/_header.scss";
+@import "2-layout/_footer.scss";
+
+@import "3-modules/_modules.scss";
+
+@import "4-utils/_clear.scss";
+@import "4-utils/_media-queries.scss";
