@@ -37,7 +37,7 @@ body {
   margin: 0 0 15px 0;
 }
 .h1, h1 {
-  font-size: 30px;
+  font-size: 40px;
   line-height: 1.05;
   letter-spacing: -1px;
   margin-bottom: 25px;
@@ -282,5 +282,8 @@ ol li {
   }
   &--white {
     color: $color-white !important;
+  }
+  &--primary {
+    color: $primary-color !important;
   }
 }
