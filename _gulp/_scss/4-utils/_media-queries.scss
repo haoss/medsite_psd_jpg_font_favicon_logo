@@ -2,7 +2,7 @@
 
 @media only screen and (min-width: 1999px) {}
 
-@media only screen and (max-width: 1599px) {}
+@media only screen and (max-width: 1650px) {}
 
 @media only screen and (max-width: 1439px) {}
 
@@ -15,6 +15,68 @@
   }
   .content {
     padding-bottom: 130px;
+    &__square {
+      &--one {
+        display: none;
+      }
+    }
+  }
+  .consultation__wrapper>div+div {
+    padding-left: 30px;
+  }
+  .news {
+    &::after {
+      display: none;
+    }
+  }
+  .comments {
+    padding-bottom: 90px;
+  }
+  .advantages {
+    padding-top: 55px;
+  }
+  .services {
+    &__block {
+      &-intro {
+        max-height: 104px;
+      }
+    }
+  }
+  .about {
+    padding-top: 45px;
+    &__carousel {
+      margin-right: 0;
+    }
+    &__content {
+      padding-left: 0;
+    }
+  }
+}
+
+@media only (max-width: 1199px) and (min-width: 992px) {
+  .about {
+    &__carousel {
+      width: 366px;
+      &-block {
+        img {
+          width: 366px;
+        }
+      }
+      .slick {
+        &-prev {
+          right: 55px;
+        }
+        &-next {
+          right: 26px;
+        }
+      }
+    }
+    &__img {
+      margin-top: 25px;
+      img {
+        width: 366px;
+      }
+    }
   }
 }
 
@@ -32,9 +94,89 @@
   .content {
     padding-bottom: 65px;
   }
+  .consultation {
+    padding: 45px 0;
+    &__wrapper {
+      flex-direction: column;
+      &>div+div {
+        padding-left: 0px;
+        padding-top: 15px;
+      } 
+    }
+    &__info {
+      text-align: center;
+    }
+  }
+  .news {
+    padding-top: 90px;
+  }
+  .advantages {
+    padding-top: 30px;
+  }
+  .services {
+    &__block {
+      width: calc(100% / 2 - 30px)
+    }
+  }
+  .about {
+    padding-top: 25px;
+    &__wrapper {
+      max-width: 595px;
+      margin: 0 auto;
+    }
+    &__img {
+      margin-left: 0;
+    }
+  }
+  .doctors {
+    &__info {
+      padding: 20px 33px;
+      margin-bottom: 90px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .comments {
+    &__wrapper {
+      .slick-slide {
+        padding-left: 62px;
+        padding-right: 62px;
+        width: auto;
+      }
+    }
+    &__nav {
+      max-width: calc(100% - 62px);
+    }
+  }
+  .services {
+    &__wrapper {
+      &>.row {
+        flex-direction: column;
+      }
+    }
+    &__block {
+      width: 100%;
+      max-width: 344px;
+      margin: 0 auto 15px;
+    }
+  }
+  .about {
+    &__img {
+      display: none;
+    }
+    &__carousel {
+      margin: 0 auto 70px;
+      float: none;
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
+  .h1, h1 {
+    font-size: 32px;
+  }
   .footer {
     &__contacts {
       margin-bottom: 20px;
@@ -54,6 +196,77 @@
   }
   .news {
     padding-top: 70px;
+  }
+  .advantages {
+    $this: &;
+    &__block {
+      padding-top: 0;
+      padding-bottom: 35px;
+      &:hover {
+        background: transparent;
+        box-shadow: 0 0 0 rgba($color-black,.07);
+        #{$this} {
+          &__block {
+            &-thumb {
+              &::before {
+                color: $color-white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .comments {
+    padding-bottom: 70px;
+  }
+  .services {
+    &__block {
+      &-wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+  .about {
+    &__carousel {
+      width: 290px;
+      &-block {
+        img {
+          width: 290px;
+        }
+      }
+      .slick {
+        &-prev {
+          right: 55px;
+        }
+        &-next {
+          right: 26px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .comments {
+    &__block {
+      &-wrapper {
+        padding-right: 30px;
+        padding-bottom: 190px;
+        &::after {
+          right: 30px;
+          bottom: 180px;
+        }
+      }
+      &-img {
+        top: inherit;
+        height: 160px;
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
@@ -75,6 +288,40 @@
   }
   .news {
     padding-top: 80px;
+  }
+  .comments {
+    &__wrapper {
+      .slick-slide {
+        padding-left: 53px;
+        padding-right: 53px;
+      }
+    }
+    &__block {
+      &-wrapper {
+        font-size: 14px;
+        padding: 15px 15px 110px 15px;  
+        p {
+          line-height: 1.3;
+        }
+        &::after {
+          bottom: 105px;
+        }
+      }
+      &-img {
+        height: 95px;
+      }
+      &-name {
+        font-size: 13px;
+        margin-left: 15px;
+        padding-left: 15px;
+      }
+    }
+  }
+  .doctors {
+    &__info {
+      font-size: 14px;
+      padding: 15px;
+    }
   }
 }
 

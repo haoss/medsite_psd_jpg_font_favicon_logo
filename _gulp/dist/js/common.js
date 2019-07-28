@@ -9,7 +9,8 @@ $(document).on('ready', function(){
       delegate: '.gallery-item',
       type: 'image',
       gallery:{
-        enabled:true
+        enabled: true,
+        tCounter: '%curr% из %total%'
       },
       zoom: {
         enabled: true, // By default it's false, so don't forget to enable it
@@ -45,7 +46,7 @@ $(document).on('ready', function(){
     type: 'iframe',
     mainClass: 'mfp-fade',
     removalDelay: 160,
-    preloader: false,
+    preloader: true,
     fixedContentPos: false
   });
 
@@ -53,6 +54,42 @@ $(document).on('ready', function(){
     type: 'inline',
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
+
+  $('.advantages__block').matchHeight();
+
+  $('.comments__carousel').slick({
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true,
+    centerPadding: '0',
+    lazyLoad: 'ondemand',
+    infinite: true,
+    dots: false,
+    arrows: true,
+    prevArrow: '#comments__prev',
+    nextArrow: '#comments__next',
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: false,
+          centerPadding: '0px',
+          centerMode: false
+        }
+      }
+    ]
+  });
+
+  $('.about__carousel').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    focusOnSelect: false
+  })
 
   // Chrome Smooth Scroll
   try {
