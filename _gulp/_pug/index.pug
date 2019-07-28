@@ -111,14 +111,10 @@ html(lang="ru")
                 .col-lg-6
 
                   .about__img
-                    img(src="./tmp/about-gallery-1.png", alt="")
+                    img(src="./tmp/about-gallery-2.png", alt="")
                   .about__carousel.gallery
                     div
                       .about__carousel-block
-                        a(href="./tmp/about-gallery-2.png").gallery-item
-                          img(src="./tmp/about-gallery-2.png", alt="")
-                    div
-                      .about__carousel-block
                         a(href="./tmp/about-gallery-1.png").gallery-item
                           img(src="./tmp/about-gallery-1.png", alt="")
                     div
@@ -127,12 +123,20 @@ html(lang="ru")
                           img(src="./tmp/about-gallery-2.png", alt="")
                     div
                       .about__carousel-block
-                        a(href="./tmp/about-gallery-1.png").gallery-item
-                          img(src="./tmp/about-gallery-1.png", alt="")
+                        a(href="./tmp/about-gallery-3.png").gallery-item
+                          img(src="./tmp/about-gallery-3.png", alt="")
                     div
                       .about__carousel-block
-                        a(href="./tmp/about-gallery-2.png").gallery-item
-                          img(src="./tmp/about-gallery-2.png", alt="")
+                        a(href="./tmp/about-gallery-4.png").gallery-item
+                          img(src="./tmp/about-gallery-4.png", alt="")
+                    div
+                      .about__carousel-block
+                        a(href="./tmp/about-gallery-5.png").gallery-item
+                          img(src="./tmp/about-gallery-5.png", alt="")
+                    div
+                      .about__carousel-block
+                        a(href="./tmp/about-gallery-6.png").gallery-item
+                          img(src="./tmp/about-gallery-6.png", alt="")
 
                 .col-lg-6
                   .about__content
@@ -156,6 +160,42 @@ html(lang="ru")
             .content__head
               .h1 ГЛАВНЫЕ СПЕЦИАЛИСТЫ КЛИНИКИ
               p Мы помогаем даже в самых тяжелых случаях!
+
+            .doctors__wrapper
+              .row
+                .col-lg-3.col-md-4
+                  .doctors__nav
+                    .doctors__nav-mobile
+                      span 
+                    .doctors__nav-list
+                      ul#doctorsTab.nav(role="tablist")
+                        li
+                          a#doctor1-tab(data-toggle="tab" href="#doctor1" role="tab" aria-controls="doctor1" aria-selected="true").active Гурьев Николай Константинович
+                        li
+                          a#doctor2-tab(data-toggle="tab" href="#doctor2" role="tab" aria-controls="doctor2" aria-selected="false") Константинов Николай Иванович
+                        li
+                          a#doctor3-tab(data-toggle="tab" href="#doctor3" role="tab" aria-controls="doctor3" aria-selected="false") Федотов Лев Викторович
+                        li
+                          a#doctor4-tab(data-toggle="tab" href="#doctor4" role="tab" aria-controls="doctor4" aria-selected="false") Орехов Николай Александрович
+                .col-lg-9.col-md-8
+                  .tab-content#doctorsTabContent
+                    .tab-pane.fade.show.active#doctor1(role='tabpanel' aria-labelledby='doctor1-tab')
+                      .doctors__block
+                        .doctors__block-title Гурьев 
+                          small Николай Константинович
+                        p Является сертифицированным психотерапевтом. Область научных интересов: тревожные расстройства, аффективные расстройства, расстройства шизофренического спектра, психофармакотерапия, психотерапия. Неоднократный участник Школы молодых ученых Российского общества психиатров (РОП) (2010, 2011, 2013). Член Российского общества психиатров и Европейского колледжа по нейропсихофармакологии (ECNP).
+                        .doctors__img
+                          .doctors__img-img
+                            img(src="./tmp/doctors-img.png", alt="")
+                          .doctors__img-title ВЕДУЩИЙ ПСИХИАТР-НАРКОЛОГ
+                            b Стаж 15 лет
+
+                    .tab-pane.fade#doctor2(role='tabpanel' aria-labelledby='doctor2-tab') 2
+                    .tab-pane.fade#doctor3(role='tabpanel' aria-labelledby='doctor3-tab') 3
+                    .tab-pane.fade#doctor4(role='tabpanel' aria-labelledby='doctor4-tab') 4
+
+              .doctors__all
+                a(href="#!") Все специалисты
 
         // Consultation
         .consultation

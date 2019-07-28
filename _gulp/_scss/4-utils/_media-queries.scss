@@ -51,6 +51,37 @@
       padding-left: 0;
     }
   }
+  .doctors {
+    padding-bottom: 120px;
+    &__block {
+      padding-right: 308px;
+    }
+    &__img {
+      margin-top: 10px;
+      &-img {
+        width: 300px;
+        height: 300px;
+        transform: rotate(19deg);
+        img {
+          transform: translate(-50%,-50%) rotate(-19deg);
+          max-width: 370px;
+        }
+      }
+      &-title {
+        margin-left: 23px;
+        margin-top: -100px;
+      }
+      &::after {
+        margin-left: 30px;
+        margin-top: -45px;
+        width: 350px;
+        height: 350px;
+      }
+    }
+    &__all {
+      padding-top: 0;
+    }
+  }
 }
 
 @media only (max-width: 1199px) and (min-width: 992px) {
@@ -129,10 +160,17 @@
     }
   }
   .doctors {
+    padding-bottom: 85px;
     &__info {
       padding: 20px 33px;
       margin-bottom: 90px;
       font-weight: 500;
+    }
+    &__img {
+      display: none;
+    }
+    &__block {
+      padding-right: 0;
     }
   }
 }
@@ -169,6 +207,52 @@
     &__carousel {
       margin: 0 auto 70px;
       float: none;
+    }
+  }
+  .doctors {
+    padding-bottom: 65px;
+    $this: &;
+    &__block {
+      margin-bottom: 35px;
+    }
+    &__wrapper {
+      padding-top: 0;
+    }
+    &__nav {
+      background: $color-1;
+      border-radius: 20px;
+      max-width: 450px;
+      margin: 0 auto 35px;
+      &.is-active {
+        padding-bottom: 10px;
+        #{$this} {
+          &__nav {
+            &-list {
+              display: block;
+            }
+          }
+        }
+      }
+      &-mobile {
+        display: block;
+      }
+      &-list {
+        margin-left: 0;
+        margin-right: 0;
+        display: none;
+        ul {
+          li {
+            a, span {
+              padding: 8px 20px;
+              min-height: 34px;
+              color: $color-white;
+              &.active {
+                display: none;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -321,6 +405,30 @@
     &__info {
       font-size: 14px;
       padding: 15px;
+      margin-bottom: 80px;
+    }
+    &__nav {
+      margin-left: -15px;
+      margin-right: -15px;
+      max-width: inherit;
+      margin-bottom: 25px;
+      &-mobile {
+        padding-left: 15px;
+        padding-right: 40px;
+        &::after {
+          right: 18px;
+        }
+      }
+      &-list {
+        ul {
+          li {
+            a, span {
+              padding-left: 15px;
+              padding-right: 15px;
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -84,12 +84,14 @@ $(document).on('ready', function(){
   $('.about__carousel').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    infinite: true,
+    // infinite: true,
     speed: 500,
     fade: true,
     cssEase: 'linear',
     focusOnSelect: false
-  })
+  });
+
+  doctorsTab();
 
   // Chrome Smooth Scroll
   try {
@@ -174,4 +176,30 @@ function simpleForm(form, callback) {
 
     return false;
   });
+}
+
+function doctorsTab() {
+  var body = $('#doctorsTab');
+  var mobile = $('.doctors__nav-mobile');
+  var links = body.find('a');
+  var linksActive = body.find('a.active');
+
+  mobile.find('span').html(linksActive.text());
+
+  mobile.on('click', function(){
+    var _this = $(this);
+    if (_this.parent().hasClass('is-active')) {
+      _this.parent().removeClass('is-active');
+    } else {
+      _this.parent().addClass('is-active');
+    }
+  });
+
+  links.on('click', function(){
+    var text = $(this).text();
+    mobile.find('span').html($(this).text());
+  });
+
+  // console.log(linksActive.text());
+  
 }
