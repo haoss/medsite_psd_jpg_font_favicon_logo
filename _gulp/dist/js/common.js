@@ -82,13 +82,17 @@ $(document).on('ready', function(){
   });
 
   $('.about__carousel').slick({
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
-    // infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear',
-    focusOnSelect: false
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
   doctorsTab();

@@ -467,9 +467,10 @@
   }
   &__carousel {
     margin-bottom: 65px;
-    width: 454px;
-    float: right;
-    margin-right: -15px;
+    // width: 454px;
+    // float: right;
+    width: 583px;
+    margin-left: -15px;
     opacity: 0.7;
     &-block {
       
@@ -477,19 +478,48 @@
         display: block;
         width: 454px;
         object-fit: cover;
+        transform: translateY(30px);
+        border-radius: 5px;
+        // box-shadow: 0 0 0 rgba($color-black,.15);
+        margin-bottom: 30px;
       }
     }
     .slick-list {
       overflow: hidden;
       border-radius: 5px;
-      box-shadow: 0 8px 45px rgba($color-black,.15);
+      // box-shadow: 0 8px 45px rgba($color-black,.15);
+      // margin-top: 30px;
     }
     .slick {
+      &-slide {
+        opacity: 0;
+        transition: all 0.35s;
+      }
+      &-active {
+        opacity: 1;
+        &:not(.slick-current) {
+          #{$this} {
+            &__carousel {
+              &-block {
+                img {
+                  transform: translateY(0);
+                  float: right;
+                  animation-duration: 0.35s;
+                  animation-name: aboutCarousel;
+                  // animation-delay: 0.15s;
+                  // transition: all 0.5s;
+                  // box-shadow: 0 8px 45px rgba($color-black,.15);
+                }
+              }
+            }
+          }
+        }
+      }
       &-prev, &-next {
         width: auto;
         height: auto;
         top: inherit;
-        bottom: -24px;
+        bottom: 7px;
         &:before {
           content: '';
           opacity: 1;
@@ -536,6 +566,15 @@
       display: block;
       border-radius: 8px;
     }
+  }
+}
+
+@keyframes aboutCarousel {
+  0% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 
