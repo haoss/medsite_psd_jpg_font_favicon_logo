@@ -1,4 +1,121 @@
 /* header */
 .header {
-  background-color: $color-gray;
+  position: absolute;
+  z-index: 800;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 15px;
+  &>div {
+    flex-shrink: 0;
+  }
+  &-holder {
+    height: 160px;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    height: 99px;
+  }
+  &__logo {
+    margin-right: 55px;
+    img {
+      display: block;
+      width: 242px;
+    }
+  }
+  &__address {
+    font-size: 11px;
+    b {
+      font-size: 16px;
+      display: block;
+      line-height: 1;
+    }
+  }
+  &__btns {
+    flex-grow: 1;
+    text-align: right;
+  }
+  &__phone {
+    font-size: 11px;
+    text-align: right;
+    font-weight: 500;
+    margin-left: 50px;
+    a {
+      font-size: 14px;
+      text-decoration: none;
+      color: $primary-color;
+      display: inline-block;
+      b {
+        font-size: 22px;
+      }
+      &:hover {
+        color: $link-color;
+      }
+    }
+    .span {
+      display: block;
+      line-height: 1;
+      font-weight: 600;
+    }
+  }
+  &__btn {
+    display: none;
+    width: 100%;
+    height: 60px;
+    background: none;
+    border: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    svg {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: 0;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__nav {
+    background: $color-white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba($color-black,.1);
+    margin: 0 -15px;
+    &-ul {
+      
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        li {
+          list-style: none;
+          margin: 0;
+          flex-grow: 1;
+          &>a, &>span {
+            color: $primary-color;
+            text-decoration: none;
+            height: 60px;
+            line-height: 60px;
+            display: block;
+            padding: 0 20px;
+            text-align: center;
+            white-space: nowrap;
+          }
+          &>a {
+            &:hover {
+              color: $color-1;
+            }
+          }
+          &.active {
+            &>a, &>span {
+              background: $color-1;
+              color: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
 }

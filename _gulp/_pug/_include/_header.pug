@@ -1,15 +1,33 @@
 // Header
 header.header
   .container
+
+    .header__top
+      .header__logo
+        img(src="./images/logo.png", alt="")
+      .header__address 
+        b г. Москва,
+        | Варшавское шоссе 58, корпус 2
+      .header__btns
+        a(href="#feedback").btn.btn--md.open-popup-link ВЫЗОВ ВРАЧА НАРКОЛОГА
+      .header__phone
+        a(href="#!") 8 (495) 
+          b 229-30-58
+        span.span Бесплатная консультация
     
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
-    
-    nav.navigation(role="navigation")
-      ul
-        each val, key in navigation
-          if active === key
-            li.active
-              a(href=val, title=key)= key
-          else
-            li
-              a(href=val, title=key)= key
+    nav.header__nav(role="navigation")
+      button(type="button" role="button").header__btn
+        svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 283 202' width="14" height="10")
+          path(d='M0 182v-20h162v40H0zm0-81V81h222v40H0zm0-81V0h283v40H0z' fill='#222')
+        | меню сайта
+      .header__nav-ul
+        ul
+          each val, key in navigation
+            if active === key
+              li.active
+                a(href=val, title=key)= key
+            else
+              li
+                a(href=val, title=key)= key
+
+//- .header-holder

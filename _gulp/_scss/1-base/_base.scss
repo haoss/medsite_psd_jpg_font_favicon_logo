@@ -28,6 +28,25 @@ body {
   // overflow-y: auto;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+  &.scroll-lock {
+    overflow: hidden;
+  }
+}
+
+.body {
+  &__shadow {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba($color-black,0.65);
+    display: none;
+    &.is-active {
+      display: block;
+    }
+  }
 }
 
 .base {

@@ -3,3 +3,42 @@
 //-     div
 //-     div
 //-     div
+
+#feedback.popup.mfp-hide
+  .popup__close
+  .popup__wrapper
+    .popup__title Получите бесплатную консультацию
+    .popup__content для Вашего близкого или индивидуальный план лечения
+    form(action="#!")
+      fieldset
+        .form-group
+          label.form-label.j-label(for="input1") Ваше имя
+          input#input1(type="text" placeholder="").form-control.j-input
+        .form-group 
+          label.form-label.j-label(for="input2") Телефон
+          input#input2(type="text" placeholder="").form-control.j-input
+      .text-center
+        button(type="submit" role="button").btn.btn--md Заказать звонок
+
+mixin mobileNav
+  .mobile__nav
+    button(type="button" role="button").mobile__nav-close
+    .mobile__nav-body
+      .mobile__nav-logo
+        img(src="./images/logo.png", alt="")
+      a(href="#feedback").btn.btn--md.btn--block.open-popup-link ВЫЗОВ ВРАЧА НАРКОЛОГА
+      .mobile__nav-ul
+        ul
+          each val, key in navigation
+            if active === key
+              li.active
+                a(href=val, title=key)= key
+            else
+              li
+                a(href=val, title=key)= key
+      .mobile__nav-phone
+        a(href="#!") 8 (495) 
+          b 229-30-58
+        span.span (круглосуточно)
+    
+  .body__shadow

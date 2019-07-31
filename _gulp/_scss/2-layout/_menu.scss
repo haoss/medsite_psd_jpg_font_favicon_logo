@@ -11,3 +11,106 @@
   }
 }
   
+.mobile__nav {
+  position: fixed;
+  z-index: 1100;
+  top: 0;
+  bottom: 0;
+  width: 285px;
+  background: $color-white;
+  box-shadow: 0 6px 25px rgba($color-black,.2);
+  transform: translateX(-285px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s;
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    .mobile__nav-close {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &-close {
+    background: none;
+    border: 0;
+    position: absolute;
+    right: -30px;
+    top: 25px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: url('../images/sprite/css_sprites.png') -0 -22px no-repeat;
+      top: 7px;
+      left: 7px;
+    }
+  }
+  &-logo {
+    margin-bottom: 16px;
+  }
+  &-body {
+    padding: 15px 18px;
+    height: 100%;
+    overflow-y: auto;
+  }
+  &-ul {
+    margin: 0 -18px;
+    padding: 20px 0;
+    ul {
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      font-size: 15px;
+      li {
+        list-style: none;
+        margin: 0;
+        &>a, &>span {
+          display: block;
+          line-height: 1.4;
+          min-height: 40px;
+          text-decoration: none;
+          color: $primary-color;
+          text-transform: uppercase;
+          padding: 9px 18px;
+        }
+        &.active {
+          &>a, &>span {
+            color: $color-1;
+          }
+        }
+      }
+    }
+  }
+  &-phone {
+    font-size: 11px;
+    font-weight: 500;
+    background: #f4f4f4;
+    margin: 0 -18px;
+    padding: 25px 18px 20px 18px;
+    a {
+      font-size: 25px;
+      text-decoration: none;
+      color: $primary-color;
+      display: inline-block;
+      &:hover {
+        color: $link-color;
+      }
+    }
+    .span {
+      display: block;
+      line-height: 1;
+      font-weight: 600;
+      font-size: 12px;
+      color: #696c6d;
+    }
+  }
+}

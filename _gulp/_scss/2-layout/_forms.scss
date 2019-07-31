@@ -1,100 +1,66 @@
-/* forms */
-
-// input, textarea {
-//   &::-webkit-input-placeholder {
-//     color: $color-gray;
-//   }
-//   &::-moz-placeholder {
-//     color: $color-gray;
-//   }
-//   &:-ms-input-placeholder {
-//     color: $color-gray;
-//   }
-//   &:-moz-placeholder {
-//     color: $color-gray;
-//   }
-// }
-
-// button, input, optgroup, select, textarea {
-//   margin: 0;
-//   font: inherit;
-//   color: inherit;
-//   outline: none;
-//   &:hover,   &:focus, &:active {
-//     outline: none;
-//   }
-// }
-
-// button, input[type=button], input[type=reset], input[type=submit] {
-//   -webkit-appearance: button;
-//   cursor: pointer;
-//   outline: none;
-// }
-
-// label {
-//   display: inline-block;
-//   max-width: 100%;
-//   margin-bottom: 5px;
-//   font-weight: 700;
-// }
-
-// .form {
-//   &-group, &__group {
-//     margin-bottom: 15px;
-//   }
-//   &-control, &__control {
-//     display: block;
-//     width: 100%;
-//     height: 34px;
-//     padding: 6px 12px;
-//     font-size: 14px;
-//     line-height: 1.42857143;
-//     color: #555;
-//     background-color: $color-white;
-//     background-image: none;
-//     border: 1px solid $color-gray;
-//     border-radius: 4px;
-//     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-//     transition: all .35s;
-//   }
-//   &-label, &__label {
-//     display: block;
-//   }
-// }
-
-// textarea {
-//   &.form-control, &.form__control {
-//     height: 150px;
-//     resize: none;
-//   }
-// }
-
-// .has {
-//   &-success {
-//     .form-control {
-//       border-color: #3c763d;
-//       box-shadow: inset 0 1px 1px rgba(#3c763d,.75);
-//     }
-//     .control-label {
-//       color: #3c763d;
-//     }
-//   }
-//   &-warning {
-//     .form-control {
-//       border-color: #8a6d3b;
-//       box-shadow: inset 0 1px 1px rgba(#8a6d3b, .75);
-//     }
-//     .control-label {
-//       color: #8a6d3b;
-//     }
-//   }
-//   &-error {
-//     .form-control {
-//       border-color: #a94442;
-//       box-shadow: inset 0 1px 1px rgba(#a94442, .75);
-//     }
-//     .control-label {
-//       color: #a94442;
-//     }
-//   }
-// }
+.form {
+  $this: &;
+  &-control {
+    font-size: 13px;
+    background: #f4f4f4;
+    border-color: #f4f4f4;
+    color: $primary-color;
+    font-weight: 600;
+    &:focus {
+      box-shadow: none;
+      border-color: $color-1;
+    }
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #777777;
+      font-size: 13px;
+      font-weight: 400;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: #777777;
+      font-size: 13px;
+      font-weight: 400;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: #777777;
+      font-size: 13px;
+      font-weight: 400;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: #777777;
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+  &-group {
+    position: relative;
+    margin-bottom: 20px;
+    &.has-error {
+      #{$this} {
+        &-control {
+          border-color: #f24841;
+          box-shadow: 0 0 0 1px inset #f24841;
+          background: $color-white url('../images/sprite/warning.png') 97% 50% no-repeat;
+          padding-right: 40px;
+        }
+      }
+    }
+    &.active, &.active-full {
+      .j-label {
+        font-size: 10px;
+        top: -15px;
+        font-weight: bold;
+      }
+    }
+  }
+  &-label {
+    margin-bottom: 0;
+    &.j-label {
+      position: absolute;
+      margin-left: 13px;
+      font-size: 13px;
+      top: 6px;
+      color: #777777;
+      transition: all 0.35s;
+    }
+  }
+}

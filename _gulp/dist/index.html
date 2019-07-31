@@ -27,23 +27,113 @@
         <link rel="stylesheet" href="./css/style.min.css">
     </head>
     <body>
+        <!-- Preloader-->
+        <div class="popup mfp-hide" id="feedback">
+            <div class="popup__close"></div>
+            <div class="popup__wrapper">
+                <div class="popup__title">Получите бесплатную консультацию</div>
+                <div class="popup__content">для Вашего близкого или индивидуальный план лечения</div>
+                <form action="#!">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="form-label j-label" for="input1">Ваше имя</label>
+                            <input class="form-control j-input" id="input1" type="text" placeholder="">
+                        </div>
+                        <div class="form-group"> 
+                            <label class="form-label j-label" for="input2">Телефон</label>
+                            <input class="form-control j-input" id="input2" type="text" placeholder="">
+                        </div>
+                    </fieldset>
+                    <div class="text-center">
+                        <button class="btn btn--md" type="submit" role="button">Заказать звонок</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+                <div class="mobile__nav">
+                    <button class="mobile__nav-close" type="button" role="button"></button>
+                    <div class="mobile__nav-body">
+                        <div class="mobile__nav-logo"><img src="./images/logo.png" alt=""></div><a class="btn btn--md btn--block open-popup-link" href="#feedback">ВЫЗОВ ВРАЧА НАРКОЛОГА</a>
+                        <div class="mobile__nav-ul">
+                            <ul>
+                                <li><a href="#!" title="Лечение алкоголизма">Лечение алкоголизма</a></li>
+                                <li><a href="#!" title="Лечение наркомании">Лечение наркомании</a></li>
+                                <li><a href="#!" title="Услуги">Услуги</a></li>
+                                <li><a href="#!" title="Лицензии">Лицензии</a></li>
+                                <li><a href="#!" title="Статьи">Статьи</a></li>
+                                <li><a href="#!" title="Отзывы">Отзывы</a></li>
+                                <li class="active"><a href="#!" title="Цены">Цены</a></li>
+                                <li><a href="#!" title="Контакты">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="mobile__nav-phone"><a href="#!">8 (495) <b>229-30-58</b></a><span class="span">(круглосуточно)</span></div>
+                    </div>
+                </div>
+                <div class="body__shadow"></div>
         <div class="base">
-            <!-- Preloader-->
             <!-- Header-->
             <header class="header">
                 <div class="container">
-                    <nav class="navigation" role="navigation">
-                        <ul>
-                            <li class="active"><a href="#" title="Главная">Главная</a></li>
-                            <li><a href="#" title="О нас">О нас</a></li>
-                            <li><a href="#" title="Продукция">Продукция</a></li>
-                            <li><a href="#" title="Сотрудничество">Сотрудничество</a></li>
-                            <li><a href="#" title="Наши магазины">Наши магазины</a></li>
-                            <li><a href="#" title="Контакты">Контакты</a></li>
-                        </ul>
+                    <div class="header__top">
+                        <div class="header__logo"><img src="./images/logo.png" alt=""></div>
+                        <div class="header__address"> <b>г. Москва,</b>Варшавское шоссе 58, корпус 2</div>
+                        <div class="header__btns"><a class="btn btn--md open-popup-link" href="#feedback">ВЫЗОВ ВРАЧА НАРКОЛОГА</a></div>
+                        <div class="header__phone"><a href="#!">8 (495) <b>229-30-58</b></a><span class="span">Бесплатная консультация</span></div>
+                    </div>
+                    <nav class="header__nav" role="navigation">
+                        <button class="header__btn" type="button" role="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283 202" width="14" height="10">
+                                <path d="M0 182v-20h162v40H0zm0-81V81h222v40H0zm0-81V0h283v40H0z" fill="#222"></path>
+                            </svg>меню сайта
+                        </button>
+                        <div class="header__nav-ul">
+                            <ul>
+                                <li><a href="#!" title="Лечение алкоголизма">Лечение алкоголизма</a></li>
+                                <li><a href="#!" title="Лечение наркомании">Лечение наркомании</a></li>
+                                <li><a href="#!" title="Услуги">Услуги</a></li>
+                                <li><a href="#!" title="Лицензии">Лицензии</a></li>
+                                <li><a href="#!" title="Статьи">Статьи</a></li>
+                                <li><a href="#!" title="Отзывы">Отзывы</a></li>
+                                <li class="active"><a href="#!" title="Цены">Цены</a></li>
+                                <li><a href="#!" title="Контакты">Контакты</a></li>
+                            </ul>
+                        </div>
                     </nav>
                 </div>
             </header>
+            <!-- Main section-->
+            <div class="main-section" style="background-image: url('./images/main-section.png');">
+                <div class="container">
+                    <div class="main-section__wrapper">
+                        <div class="main-section__title">Наркологический центр <small>лечение алкоголизма и наркомании:</small></div>
+                        <div class="main-section__content">
+                            <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. </p>
+                        </div>
+                        <div class="main-advantages">
+                            <div class="main-advantages__block is-hover">
+                                <div class="main-advantages__img"><img src="./images/main-advantages-1.svg" alt=""></div>
+                                <div class="main-advantages__text">доступные цены</div>
+                            </div>
+                            <div class="main-advantages__block">
+                                <div class="main-advantages__img"><img src="./images/main-advantages-2.svg" alt=""></div>
+                                <div class="main-advantages__text">доступные цены</div>
+                            </div>
+                            <div class="main-advantages__block">
+                                <div class="main-advantages__img"><img src="./images/main-advantages-3.svg" alt=""></div>
+                                <div class="main-advantages__text">доступные цены</div>
+                            </div>
+                            <div class="main-advantages__block">
+                                <div class="main-advantages__img"><img src="./images/main-advantages-4.svg" alt=""></div>
+                                <div class="main-advantages__text">доступные цены</div>
+                            </div>
+                            <div class="main-advantages__block">
+                                <div class="main-advantages__img"><img src="./images/main-advantages-5.svg" alt=""></div>
+                                <div class="main-advantages__text">доступные цены</div>
+                            </div>
+                        </div><a class="btn__consultation" href="#!"><span>получить бесплатную консультацию</span></a>
+                    </div>
+                </div>
+            </div>
             <!-- Content-->
             <div class="content">
                 <div class="content__square content__square--one"></div>
@@ -193,9 +283,36 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tab-pane fade" id="doctor2" role="tabpanel" aria-labelledby="doctor2-tab">2</div>
-                                        <div class="tab-pane fade" id="doctor3" role="tabpanel" aria-labelledby="doctor3-tab">3</div>
-                                        <div class="tab-pane fade" id="doctor4" role="tabpanel" aria-labelledby="doctor4-tab">4</div>
+                                        <div class="tab-pane fade" id="doctor2" role="tabpanel" aria-labelledby="doctor2-tab">
+                                            <div class="doctors__block">
+                                                <div class="doctors__block-title">Константинов <small>Николай Иванович</small></div>
+                                                <p>Является сертифицированным психотерапевтом. Область научных интересов: тревожные расстройства, аффективные расстройства, расстройства шизофренического спектра, психофармакотерапия, психотерапия. Неоднократный участник Школы молодых ученых Российского общества психиатров (РОП) (2010, 2011, 2013). Член Российского общества психиатров и Европейского колледжа по нейропсихофармакологии (ECNP).</p>
+                                                <div class="doctors__img">
+                                                    <div class="doctors__img-img"><img src="./tmp/doctors-img.png" alt=""></div>
+                                                    <div class="doctors__img-title">ВЕДУЩИЙ ПСИХИАТР-НАРКОЛОГ<b>Стаж 15 лет</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="doctor3" role="tabpanel" aria-labelledby="doctor3-tab">
+                                            <div class="doctors__block">
+                                                <div class="doctors__block-title">Федотов <small>Лев Викторович</small></div>
+                                                <p>Является сертифицированным психотерапевтом. Область научных интересов: тревожные расстройства, аффективные расстройства, расстройства шизофренического спектра, психофармакотерапия, психотерапия. Неоднократный участник Школы молодых ученых Российского общества психиатров (РОП) (2010, 2011, 2013). Член Российского общества психиатров и Европейского колледжа по нейропсихофармакологии (ECNP).</p>
+                                                <div class="doctors__img">
+                                                    <div class="doctors__img-img"><img src="./tmp/doctors-img.png" alt=""></div>
+                                                    <div class="doctors__img-title">ВЕДУЩИЙ ПСИХИАТР-НАРКОЛОГ<b>Стаж 15 лет</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="doctor4" role="tabpanel" aria-labelledby="doctor4-tab">
+                                            <div class="doctors__block">
+                                                <div class="doctors__block-title">Орехов <small>Николай Александрович</small></div>
+                                                <p>Является сертифицированным психотерапевтом. Область научных интересов: тревожные расстройства, аффективные расстройства, расстройства шизофренического спектра, психофармакотерапия, психотерапия. Неоднократный участник Школы молодых ученых Российского общества психиатров (РОП) (2010, 2011, 2013). Член Российского общества психиатров и Европейского колледжа по нейропсихофармакологии (ECNP).</p>
+                                                <div class="doctors__img">
+                                                    <div class="doctors__img-img"><img src="./tmp/doctors-img.png" alt=""></div>
+                                                    <div class="doctors__img-title">ВЕДУЩИЙ ПСИХИАТР-НАРКОЛОГ<b>Стаж 15 лет</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

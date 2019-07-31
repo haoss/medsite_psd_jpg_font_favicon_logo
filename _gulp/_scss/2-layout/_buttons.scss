@@ -8,15 +8,23 @@
   font-size: 15px;
   font-weight: 600;
   border-radius: 35px;
-  color: $primary-color;
+  color: $color-white;
   text-transform: uppercase;
-  box-shadow: 0 0 0 $primary-color;
+  display: inline-block;
+  box-shadow: 0 0 0 $color-1;
+  padding: 13px 10px;
+  text-decoration: none;
   &:hover {
-    box-shadow: 0 6px 15px rgba($primary-color,.8);
+    box-shadow: 0 6px 15px rgba($color-1,.8);
+    color: $color-white;
+  }
+  &:active {
+    outline: none;
   }
   &:focus {
     outline: none;
-    box-shadow: 0 6px 15px rgba($primary-color,.8);
+    box-shadow: 0 6px 15px rgba($color-1,.8);
+    color: $color-white;
   }
   &:active {
     transform: scale(0.95);
@@ -24,12 +32,74 @@
   &--reverse {
     background: $color-white;
     box-shadow: 0 0 0 $color-white;
+    color: $primary-color;
     &:hover {
       box-shadow: 0 6px 15px rgba($color-white,.8);
+      color: $primary-color;
     }
     &:focus {
       outline: none;
       box-shadow: 0 6px 15px rgba($color-white,.8);
+      color: $primary-color;
+    }
+  }
+  &--md {
+    height: 40px;
+    font-size: 12px;
+    min-width: 230px;
+    padding-bottom: 11px;
+    padding-top: 11px;
+  }
+  &--block {
+    width: 100%;
+  }
+  &__consultation {
+    height: 60px;
+    width: 280px;
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    color: $color-white;
+    background: $color-1;
+    border-radius: 35px;
+    display: inline-block;
+    transition: color .35s,background .35s,border .35s,box-shadow .35s;
+    padding-left: 32px;
+    line-height: 1.7;
+    padding-top: 11px;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 22px; 
+      height: 13px;
+      background: url('../images/sprite/css_sprites.png') -34px -0;
+      right: 19px;
+      top: 24px;
+      z-index: 5;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      background: $color-white;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      right: 6px;
+      top: 6px;
+    }
+    &:hover {
+      box-shadow: 0 6px 15px rgba($color-1,.8);
+      color: $color-white;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 6px 15px rgba($color-1,.8);
+      color: $color-white;
+    }
+    &:active {
+      transform: scale(0.95);
     }
   }
 }

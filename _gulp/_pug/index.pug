@@ -4,17 +4,56 @@ html(lang="ru")
 
   -var active = 'Главная' //активный пункт меню, список в header.jade
   -var pageTitle = 'Главная' + ' - Наркопроф' //title страницы для генерации верстки
+  -var active = 'Цены'
+  -var navigation = { 'Лечение алкоголизма':'#!', 'Лечение наркомании':'#!', 'Услуги':'#!', 'Лицензии':'#!', 'Статьи':'#!', 'Отзывы':'#!', 'Цены':'#!', 'Контакты':'#!'};
 
   include ./_include/_head
 
   body
+    // Preloader
+    include ./_include/_preloader
+
+    +mobileNav
 
     .base
-
-      // Preloader
-      include ./_include/_preloader
-
       include ./_include/_header
+
+      // Main section
+      .main-section(style="background-image: url('./images/main-section.png');")
+        .container
+
+          .main-section__wrapper
+            .main-section__title Наркологический центр 
+              small лечение алкоголизма и наркомании:
+
+            .main-section__content
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. 
+
+            .main-advantages
+              .main-advantages__block.is-hover
+                .main-advantages__img
+                  img(src="./images/main-advantages-1.svg", alt="")
+                .main-advantages__text доступные цены
+              .main-advantages__block
+                .main-advantages__img
+                  img(src="./images/main-advantages-2.svg", alt="")
+                .main-advantages__text доступные цены
+              .main-advantages__block
+                .main-advantages__img
+                  img(src="./images/main-advantages-3.svg", alt="")
+                .main-advantages__text доступные цены
+              .main-advantages__block
+                .main-advantages__img
+                  img(src="./images/main-advantages-4.svg", alt="")
+                .main-advantages__text доступные цены
+              .main-advantages__block
+                .main-advantages__img
+                  img(src="./images/main-advantages-5.svg", alt="")
+                .main-advantages__text доступные цены
+
+            a(href="#!").btn__consultation
+              span получить бесплатную консультацию
+
 
       // Content
       .content
@@ -190,9 +229,36 @@ html(lang="ru")
                           .doctors__img-title ВЕДУЩИЙ ПСИХИАТР-НАРКОЛОГ
                             b Стаж 15 лет
 
-                    .tab-pane.fade#doctor2(role='tabpanel' aria-labelledby='doctor2-tab') 2
-                    .tab-pane.fade#doctor3(role='tabpanel' aria-labelledby='doctor3-tab') 3
-                    .tab-pane.fade#doctor4(role='tabpanel' aria-labelledby='doctor4-tab') 4
+                    .tab-pane.fade#doctor2(role='tabpanel' aria-labelledby='doctor2-tab')
+                      .doctors__block
+                        .doctors__block-title Константинов 
+                          small Николай Иванович
+                        p Является сертифицированным психотерапевтом. Область научных интересов: тревожные расстройства, аффективные расстройства, расстройства шизофренического спектра, психофармакотерапия, психотерапия. Неоднократный участник Школы молодых ученых Российского общества психиатров (РОП) (2010, 2011, 2013). Член Российского общества психиатров и Европейского колледжа по нейропсихофармакологии (ECNP).
+                        .doctors__img
+                          .doctors__img-img
+                            img(src="./tmp/doctors-img.png", alt="")
+                          .doctors__img-title ВЕДУЩИЙ ПСИХИАТР-НАРКОЛОГ
+                            b Стаж 15 лет
+                    .tab-pane.fade#doctor3(role='tabpanel' aria-labelledby='doctor3-tab')
+                      .doctors__block
+                        .doctors__block-title Федотов 
+                          small Лев Викторович
+                        p Является сертифицированным психотерапевтом. Область научных интересов: тревожные расстройства, аффективные расстройства, расстройства шизофренического спектра, психофармакотерапия, психотерапия. Неоднократный участник Школы молодых ученых Российского общества психиатров (РОП) (2010, 2011, 2013). Член Российского общества психиатров и Европейского колледжа по нейропсихофармакологии (ECNP).
+                        .doctors__img
+                          .doctors__img-img
+                            img(src="./tmp/doctors-img.png", alt="")
+                          .doctors__img-title ВЕДУЩИЙ ПСИХИАТР-НАРКОЛОГ
+                            b Стаж 15 лет
+                    .tab-pane.fade#doctor4(role='tabpanel' aria-labelledby='doctor4-tab')
+                      .doctors__block
+                        .doctors__block-title Орехов 
+                          small Николай Александрович
+                        p Является сертифицированным психотерапевтом. Область научных интересов: тревожные расстройства, аффективные расстройства, расстройства шизофренического спектра, психофармакотерапия, психотерапия. Неоднократный участник Школы молодых ученых Российского общества психиатров (РОП) (2010, 2011, 2013). Член Российского общества психиатров и Европейского колледжа по нейропсихофармакологии (ECNP).
+                        .doctors__img
+                          .doctors__img-img
+                            img(src="./tmp/doctors-img.png", alt="")
+                          .doctors__img-title ВЕДУЩИЙ ПСИХИАТР-НАРКОЛОГ
+                            b Стаж 15 лет
 
               .doctors__all
                 a(href="#!") Все специалисты

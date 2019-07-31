@@ -52,8 +52,29 @@ $(document).on('ready', function(){
 
   $('.open-popup-link').magnificPopup({
     type: 'inline',
-    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    midClick: true,
+    showCloseBtn: false,
+    callbacks: {
+      beforeOpen: function() {
+        var width = $(window).width();
+        var btn = $('.header__btn');
+        var shadow = $('.body__shadow');
+        var body = $('body');
+        var mobile = $('.mobile__nav');
+
+        if (width <= 991 && body.hasClass('scroll-lock') && mobile.hasClass('is-active')) {
+          btn.removeClass('is-active');
+          shadow.removeClass('is-active');
+          body.removeClass('scroll-lock');
+          mobile.removeClass('is-active');
+        }
+      }
+    }
   });
+
+  $('.popup__close').on('click', function(){
+    $.magnificPopup.close();
+  })
 
   $('.advantages__block').matchHeight();
 
@@ -96,6 +117,8 @@ $(document).on('ready', function(){
   });
 
   doctorsTab();
+  inputFocus();
+  mobileNav();
 
   // Chrome Smooth Scroll
   try {
@@ -116,7 +139,17 @@ $(window).on('load', function() {
 });
 
 $(window).on('scroll', function() { });
-$(window).on('resize', function() { });
+$(window).on('resize', function() { 
+  var width = $(window).width();
+
+  if (width >= 992) {
+    $('.header__btn').removeClass('is-active');
+    $('.body__shadow').removeClass('is-active');
+    $('body').removeClass('scroll-lock');
+    $('.mobile__nav').removeClass('is-active');
+  }
+
+});
 
 /*
 version 2015-09-23 14:30 GMT +2
@@ -205,5 +238,81 @@ function doctorsTab() {
   });
 
   // console.log(linksActive.text());
+  
+}
+
+function inputFocus(){
+  var jinput = $(".j-input");
+
+  jinput.each(function(){
+    var _this = $(this);
+    var val = _this.val();
+
+    if (val.length > 0 && _this.is('input') || val.length > 0 && _this.is('textarea')) {
+      _this.parent().addClass("active-full");
+    } else {
+      _this.parent().removeClass("active-full");
+    }
+
+    // input on focus
+    _this.focus(function () {
+      _this.parent().addClass("active");
+    }).blur(function () {
+      _this.parent().removeClass("active");
+    })
+
+    _this.on('change', function () {
+      var val = _this.val();
+
+      if (val == '') {
+        _this.parent().removeClass("active-full");
+      } else {
+        _this.parent().addClass("active-full");
+      }
+    });
+  })
+}
+
+function mobileNav() {
+  var width = $(window).width();
+  var btn = $('.header__btn');
+  var shadow = $('.body__shadow');
+  var body = $('body');
+  var mobile = $('.mobile__nav');
+  var close = mobile.find('.mobile__nav-close');
+
+  btn.on('click', function(){
+    var _this = $(this);
+
+    if (_this.hasClass('is-active')) {
+      _this.removeClass('is-active');
+      shadow.removeClass('is-active');
+      body.removeClass('scroll-lock');
+      mobile.removeClass('is-active');
+    } else {
+      _this.addClass('is-active');
+      shadow.addClass('is-active');
+      body.addClass('scroll-lock');
+      mobile.addClass('is-active');
+    }
+  });
+
+  shadow.on('click', function(){
+    if (body.hasClass('scroll-lock') && mobile.hasClass('is-active')) {
+      btn.removeClass('is-active');
+      shadow.removeClass('is-active');
+      body.removeClass('scroll-lock');
+      mobile.removeClass('is-active');
+    }
+  });
+
+  close.on('click', function(e){
+    if (body.hasClass('scroll-lock') && mobile.hasClass('is-active')) {
+      btn.removeClass('is-active');
+      shadow.removeClass('is-active');
+      body.removeClass('scroll-lock');
+      mobile.removeClass('is-active');
+    }
+  });
   
 }
