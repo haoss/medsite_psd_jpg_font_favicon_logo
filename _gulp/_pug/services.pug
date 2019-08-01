@@ -1,0 +1,95 @@
+doctype
+
+html(lang="ru")
+
+  -var pageTitle = 'Все услуги' + ' - Наркопроф' //title страницы для генерации верстки
+  -var active = 'Услуги'
+  -var navigation = { 'Лечение алкоголизма':'#!', 'Лечение наркомании':'#!', 'Услуги':'#!', 'Лицензии':'#!', 'Статьи':'#!', 'Отзывы':'#!', 'Цены':'#!', 'Контакты':'#!'};
+
+  include ./_include/_head
+
+  body.body--all
+    // Preloader
+    include ./_include/_preloader
+
+    +mobileNav
+
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content.content--all
+        .container
+
+          .breadcrumbs
+            ul
+              li
+                a(href="#!") Центр помощи Наркопроф
+              li
+                a(href="#!") Название раздела
+              li
+                span Название страницы
+
+          h1 Услуги
+          p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот.
+
+          .clear20
+
+          .services.services--list
+            .row
+              figure.services__block.services__block--list
+                a(href="1-service.html")
+                  img(src="./tmp/services-img-1.png", alt="")
+                figcaption
+                  a(href="1-service.html") Реабилитационный центр для лечения наркотической зависимости
+              figure.services__block.services__block--list
+                a(href="1-service.html")
+                  img(src="./tmp/services-img-2.png", alt="")
+                figcaption
+                  a(href="1-service.html") Реабилитационный центр для лечения наркотической зависимости
+              figure.services__block.services__block--list
+                a(href="1-service.html")
+                  img(src="./tmp/services-img-3.png", alt="")
+                figcaption
+                  a(href="1-service.html") Лечение наркомании
+              figure.services__block.services__block--list
+                a(href="1-service.html")
+                  img(src="./tmp/services-img-4.png", alt="")
+                figcaption
+                  a(href="1-service.html") Лечение алкоголизма
+              figure.services__block.services__block--list
+                a(href="1-service.html")
+                  img(src="./tmp/services-img-5.png", alt="")
+                figcaption
+                  a(href="1-service.html") Кодирование от наркомании (кодирование от наркотической зависимости)
+              figure.services__block.services__block--list
+                a(href="1-service.html")
+                  img(src="./tmp/services-img-6.png", alt="")
+                figcaption
+                  a(href="1-service.html") Кодирование от алкоголизма
+              figure.services__block.services__block--list
+                a(href="1-service.html")
+                  img(src="./tmp/services-img-7.png", alt="")
+                figcaption
+                  a(href="1-service.html") Вызов нарколога на дом
+              figure.services__block.services__block--list
+                a(href="1-service.html")
+                  img(src="./tmp/services-img-8.png", alt="")
+                figcaption
+                  a(href="1-service.html") Вывод из запоя
+              figure.services__block.services__block--list
+                a(href="1-service.html")
+                  img(src="./tmp/services-img-9.png", alt="")
+                figcaption
+                  a(href="1-service.html") Вшивание (имплантация) налтрексона
+
+      // Consultation
+      +consultationFooter
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #fff")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

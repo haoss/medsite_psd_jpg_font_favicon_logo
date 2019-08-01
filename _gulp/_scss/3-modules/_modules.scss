@@ -464,6 +464,9 @@
   background: $color-2;
   counter-reset: number;
   $this: &;
+  &--list {
+    background: none;
+  }
   &__wrapper {
     position: relative;
     z-index: 10;
@@ -566,6 +569,32 @@
             }
           }
         }
+      }
+    }
+    &--list {
+      height: auto;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 35px;
+      a {
+        text-decoration: none;
+        color: $primary-color;
+        &:hover {
+          color: $color-1;
+        }
+      }
+      img {
+        position: relative;
+        z-index: 5;
+        border-radius: 6px;
+        box-shadow: 0 8px 35px rgba($color-black,.15);
+        display: block;
+        max-width: 100%;
+        margin-bottom: 18px;
+      }
+      figcaption {
+        padding-left: 17px;
       }
     }
   }
@@ -1226,6 +1255,7 @@
       position: relative;
       margin-top: -30px;
       font-size: 13px;
+      pointer-events: none;
       p {
         &:last-child {
           margin-bottom: 0;
