@@ -1201,3 +1201,36 @@
     z-index: 5;
   }
 }
+
+.articles {
+  &__block {
+    margin-bottom: 40px;
+    &-link {
+      display: block;
+      img {
+        display: block;
+      }
+    }
+    &-title {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    figcaption {
+      border-left: 3px solid $color-1;
+      margin-left: 23px;
+      padding-left: 20px;
+      padding-top: 45px;
+      padding-bottom: 10px;
+      position: relative;
+      margin-top: -30px;
+      font-size: 13px;
+      p {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

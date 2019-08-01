@@ -42,3 +42,47 @@ mixin mobileNav
         span.span (круглосуточно)
     
   .body__shadow
+
+mixin asideNav
+  .aside__nav
+    ul
+      li
+        a(href="#!") Кодирование от наркомании (кодирование от наркотической зависимости)
+      li
+        a(href="#!") Кодирование от алкоголизма
+      li.active
+        a(href="#!") Реабилитационный центр для лечения наркотической зависимости
+      li
+        a(href="#!") Вывод из запоя
+      li
+        a(href="#!") Вызов нарколога на дом
+      li
+        a(href="#!") Лечение наркомании
+      li
+        a(href="#!") Лечение алкоголизма
+      li
+        a(href="#!") Реабилитационный центр для лечения алкогольной зависимости
+      li
+        a(href="#!") Вшивание (имплантация) налтрексона
+
+mixin asideBanner
+  .aside__banner
+    .aside__banner-wrapper
+      .aside__banner-title 
+        b Получите бесплатную консультацию,
+        | для Вашего близкого или индивидуальный план лечения
+      a(href="#feedback").btn.btn--md позвоните мне сейчас
+
+mixin consultationFooter
+  .consultation.consultation--footer
+    .container
+
+      .consultation__wrapper
+        div
+          .consultation__info 
+            strong.text-uppercase Получите бесплатную консультацию 
+            | для 
+            br
+            | Вашего близкого или индивидуальный план лечения
+        div
+          a(href="#feedback").btn.btn--reverse.open-popup-link Хочу получить

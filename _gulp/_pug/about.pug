@@ -69,8 +69,6 @@ html(lang="ru")
                 h2 Наши специалисты
 
                 .specialist__block
-                  .specialist__block-title Гурьев 
-                      small Николай Константинович
                   .specialist__thumb
                     .specialist__thumb-img
                       img(src="./tmp/doctors-img.png", alt="")
@@ -109,50 +107,14 @@ html(lang="ru")
                     p В декабре 2010 – январе 2011 прошел повышение квалификации в Российском университете дружбы народов и получил сертификат по специальности «психиатрия-наркология».
 
             .col-lg-4
-              .aside
-
-                .aside__banner
-                  .aside__banner-wrapper
-                    .aside__banner-title 
-                      b Получите бесплатную консультацию,
-                      | для Вашего близкого или индивидуальный план лечения
-                    a(href="#feedback").btn.btn--md позвоните мне сейчас
+              aside.aside
+                +asideBanner
 
                 // Navigation
-                .aside__nav
-                  ul
-                    li
-                      a(href="#!") Кодирование от наркомании (кодирование от наркотической зависимости)
-                    li
-                      a(href="#!") Кодирование от алкоголизма
-                    li.active
-                      a(href="#!") Реабилитационный центр для лечения наркотической зависимости
-                    li
-                      a(href="#!") Вывод из запоя
-                    li
-                      a(href="#!") Вызов нарколога на дом
-                    li
-                      a(href="#!") Лечение наркомании
-                    li
-                      a(href="#!") Лечение алкоголизма
-                    li
-                      a(href="#!") Реабилитационный центр для лечения алкогольной зависимости
-                    li
-                      a(href="#!") Вшивание (имплантация) налтрексона
+                +asideNav
 
       // Consultation
-      .consultation.consultation--footer
-        .container
-
-          .consultation__wrapper
-            div
-              .consultation__info 
-                strong.text-uppercase Получите бесплатную консультацию 
-                | для 
-                br
-                | Вашего близкого или индивидуальный план лечения
-            div
-              a(href="#feedback").btn.btn--reverse.open-popup-link Хочу получить
+      +consultationFooter
 
       include ./_include/_footer
       //- div(style="height: 1000px; background-color: #fff")

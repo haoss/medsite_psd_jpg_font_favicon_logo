@@ -12,8 +12,9 @@
   text-transform: uppercase;
   display: inline-block;
   box-shadow: 0 0 0 $color-1;
-  padding: 13px 10px;
+  padding: 12px 10px;
   text-decoration: none;
+  border: 1px solid $color-1;
   &:hover {
     box-shadow: 0 6px 15px rgba($color-1,.8);
     color: $color-white;
@@ -33,6 +34,7 @@
     background: $color-white;
     box-shadow: 0 0 0 $color-white;
     color: $primary-color;
+    border-color: $color-white;
     &:hover {
       box-shadow: 0 6px 15px rgba($color-white,.8);
       color: $primary-color;
@@ -48,10 +50,21 @@
     font-size: 12px;
     min-width: 230px;
     padding-bottom: 11px;
-    padding-top: 11px;
+    padding-top: 9px;
   }
   &--block {
     width: 100%;
+  }
+  &--border {
+    background: $color-white;
+    color: $color-1;
+    border-color: $color-1;
+    &:hover, &:focus {
+      color: $color-1;
+    }
+    &:active {
+      color: $color-1;
+    }
   }
   &__consultation {
     height: 60px;

@@ -1,0 +1,82 @@
+doctype
+
+html(lang="ru")
+
+  -var pageTitle = 'Все статьи' + ' - Наркопроф' //title страницы для генерации верстки
+  -var active = 'Статьи'
+  -var navigation = { 'Лечение алкоголизма':'#!', 'Лечение наркомании':'#!', 'Услуги':'#!', 'Лицензии':'#!', 'Статьи':'#!', 'Отзывы':'#!', 'Цены':'#!', 'Контакты':'#!'};
+
+  include ./_include/_head
+
+  body.body--all
+    // Preloader
+    include ./_include/_preloader
+
+    +mobileNav
+
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content.content--all
+        .container
+
+          .breadcrumbs
+            ul
+              li
+                a(href="#!") Центр помощи Наркопроф
+              li
+                a(href="#!") Название раздела
+              li
+                span Название страницы
+
+          .row
+            .col-lg-8
+              h1 Статьи
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот.
+              .clear20
+
+              // Articles
+              .articles
+                figure.articles__block
+                  a(href="1-article.html").articles__block-link
+                    img(src="./tmp/1-article.png", alt="").img-fluid
+                  figcaption
+                    .articles__block-title Далеко-далеко за словесными горами
+                    p В стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах
+                figure.articles__block
+                  a(href="1-article.html").articles__block-link
+                    img(src="./tmp/1-article.png", alt="").img-fluid
+                  figcaption
+                    .articles__block-title Далеко-далеко за словесными горами
+                    p В стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах
+                figure.articles__block
+                  a(href="1-article.html").articles__block-link
+                    img(src="./tmp/1-article.png", alt="").img-fluid
+                  figcaption
+                    .articles__block-title Далеко-далеко за словесными горами
+                    p В стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах
+              
+              .text-center
+                a(href="#!").btn.btn--md.btn--border Загрузить еще отзывы
+
+              .d-lg-none
+                .clear60
+
+            .col-lg-4
+              aside.aside
+                +asideBanner
+
+                // Navigation
+                +asideNav
+
+      // Consultation
+      +consultationFooter
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #fff")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+
