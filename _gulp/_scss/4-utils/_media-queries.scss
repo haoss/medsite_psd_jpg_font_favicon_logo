@@ -20,6 +20,10 @@
         display: none;
       }
     }
+    &__carousel {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   .consultation__wrapper>div+div {
     padding-left: 30px;
@@ -147,6 +151,9 @@
   }
   .consultation {
     padding: 45px 0;
+    &--footer {
+      padding-bottom: 75px;
+    }
     &__wrapper {
       flex-direction: column;
       &>div+div {
@@ -238,6 +245,41 @@
       }
     }
   } 
+  .specialist {
+    margin-bottom: 10px;
+  }
+}
+
+@media only (max-width: 991px) and (min-width: 768px) {
+  .aside {
+    &__banner {
+      margin-bottom: 40px;
+      &-wrapper {
+        height: 150px;
+        background: {
+          color: #40b4f8;
+          image: url('../images/bg-1.png');
+          position: 0 0;
+          repeat: no-repeat;
+          size: cover;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .btn {
+          position: relative;
+          left: inherit;
+          bottom: inherit;
+          transform: translate(0);
+        }
+      }
+      &-title {
+        position: relative;
+        bottom: inherit;
+        max-width: 360px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 799px) {
@@ -295,6 +337,9 @@
   }
   .content {
     padding-bottom: 110px;
+    &--all {
+      padding-top: 235px;
+    }
   }
   .news {
     padding-top: 70px;
@@ -483,6 +528,28 @@
           width: 100%;
         }
       }
+    }
+  }
+  .specialist {
+    &__block {
+      flex-direction: column;
+      &-content {
+        padding-left: 0;
+      }
+    }
+    &__thumb {
+      margin-bottom: 30px;
+      &::after {
+        top: -125px;
+        margin-left: 29px;
+      }
+    }
+  }
+  .aside {
+    &__banner {
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

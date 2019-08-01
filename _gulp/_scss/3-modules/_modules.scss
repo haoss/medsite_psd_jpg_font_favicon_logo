@@ -3,6 +3,7 @@
   padding-bottom: 140px;
   // overflow: hidden;
   position: relative;
+  $this: &;
   &__head {
     .h1, h1 {
       margin-bottom: 20px;
@@ -25,6 +26,96 @@
     margin-top: 347px;
     right: 72%;
     background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMTQuOCAyMTQuOCI+ICA8cGF0aCBkPSJNODUuNCAyMTQuNmguNWMwIC4xIDAgLjItLjMuMi0uNCAwLS40IDAtLjItLjJ6bS0yNS41LTExLjVsLS41LS42LjYuNS42LjZjMCAuMi0uMiAwLS43LS41em0tMi4xLTIuMWwtLjUtLjYuNi41LjYuNmMwIC4yLS4zIDAtLjctLjV6bTE0My4xLTQ0LjFsLjYtLjZjLjEgMCAwIC4zLS4zLjZhMiAyIDAgMCAxLS42LjVzMC0uMi4zLS41em0yLjEtMi4ybC43LS41cy0uMS4zLS40LjVhMiAyIDAgMCAxLS42LjZzMC0uMy4zLS42em0xMS42LTI1LjVjMC0uMyAwLS40LjEtLjJ2LjVsLS4xLS4zek0wIDg1LjVjMC0uMyAwLS4zLjItLjF2LjVjLS4xIDAtLjIgMC0uMi0uNHpNMTEuNSA2MGwuNi0uNXMwIC4yLS4zLjVhMiAyIDAgMCAxLS43LjZsLjQtLjZ6bTItMmwuNy0uNmMuMSAwLS4xLjMtLjUuNmwtLjcuNy41LS43em0xNDMuMi00NC4zbC0uNS0uNi42LjVjLjYuNC43LjcuNS43bC0uNi0uNnptLTIuMS0yLjJsLS41LS42LjYuNi42LjVjMCAuMy0uMi4xLS43LS41ek0xMjkgLjFoLjZsLS40LjFjLS4zIDAtLjQgMC0uMi0uMXoiIGZpbGw9IiNmOWY5ZmEiLz4gIDxwYXRoIGQ9Ik01OC44IDIwMmwtLjUtLjYuNi42LjYuNWMwIC4zLS4yLjEtLjctLjV6TTIwMiAxNTUuOGwuNi0uNXMwIC4yLS4zLjVhMiAyIDAgMCAxLS43LjVsLjQtLjV6TTEyLjIgNTkuNGwuNC0uNWMuNC0uMy40LS4zLjEuMS0uMy41LS41LjYtLjUuNHptMTQzLjUtNDYuOGwtLjUtLjYuNi41LjUuNmMwIC4yLS4yIDAtLjYtLjV6IiBmaWxsPSIjZjZmOGY4Ii8+ICA8cGF0aCBkPSJNOTIuNSAyMTQuNmguNWMuMS4xIDAgLjItLjMuMnMtLjQgMC0uMi0uMnptMTIyLTkyLjVjMC0uNC4yLS40LjItLjJ2LjVsLS4xLS4zek0wIDkyLjdjMC0uMyAwLS40LjItLjJ2LjVjLS4xLjEtLjIgMC0uMi0uM3pNMTIxLjkgMGguNWwtLjMuMWMtLjMgMC0uNCAwLS4yLS4xem01LjggMGguNWwtLjMuMWMtLjMgMC0uNCAwLS4yLS4xeiIgZmlsbD0iI2YyZjRmNSIvPiAgPHBhdGggZD0iTTg3LjIgMjE0LjZoLjdjLjIuMSAwIC4yLS4zLjItLjQgMC0uNiAwLS40LS4yem0xMjcuNC04Ny40YzAtLjMgMC0uNS4xLS4zdi43bC0uMS0uNHptMC00LjRjMC0uMyAwLS4zLjEtLjF2LjVsLS4xLS40ek0wIDkxLjhjMC0uMiAwLS4zLjIgMHYuNGMtLjEuMS0uMiAwLS4yLS4zem0wLTQuM2MwLS4zIDAtLjUuMi0uM3YuN2MtLjEuMi0uMiAwLS4yLS40ek0xMjcgLjFjLjEtLjEuNC0uMS40IDBsLS4zLjFjLS4zIDAtLjQgMC0uMi0uMXoiIGZpbGw9IiNlZWYwZjIiLz4gIDxwYXRoIGQ9Ik04OC4zIDIxNC42aC42Yy4yLjEgMCAuMi0uMy4ycy0uNSAwLS4zLS4yem0yLjQgMGguOGMuMiAwIDAgLjItLjQuMnMtLjYgMC0uNC0uMnptMTIzLjktODguNGMwLS40IDAtLjUuMS0uNHYuN2wtLjEtLjN6bTAtMi40YzAtLjQgMC0uNS4xLS4zdi42bC0uMS0uM3pNMCA5MWMwLS40IDAtLjUuMi0uM3YuNmMtLjEuMi0uMiAwLS4yLS4zem0wLTIuNGMwLS40IDAtLjUuMi0uM3YuNmMtLjEuMi0uMiAwLS4yLS4zek0xMjMuMi4xYy4yLS4xLjUtLjEuOCAwaC0uOHptMi43IDBoLjMtLjN6IiBmaWxsPSIjZWJlZWYwIi8+ICA8cGF0aCBkPSJNODYuNSAyMTQuNWMtMTMuMS0uOS0yNS40LTgtMzIuNy0xOS0yLTMtNDguNS04NS00OS44LTg3LjhhNDMuOCA0My44IDAgMCAxIDE1LjMtNTMuOWMzLjgtMi41IDg1LjUtNDguNyA4OC40LTUwQTQzLjQgNDMuNCAwIDAgMSAxNjEgMTkuM2MyIDMgNDguNSA4NSA0OS44IDg3LjhhNDMuOCA0My44IDAgMCAxLTE0IDUzYy0zIDIuMi04Ni44IDQ5LjctOTAgNTFhNDMuNiA0My42IDAgMCAxLTIwLjMgMy40eiIgZmlsbD0iI2VhZWRlZiIvPjwvc3ZnPg==) no-repeat 0 0;
+  }
+  &--all {
+    padding-top: 175px;
+    padding-bottom: 40px !important;
+  }
+  &__document {
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__carousel {
+    padding: 0 30px 45px 30px;
+    &-block {
+      position: relative;
+      &::after, &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background: $color-white;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.5s;
+      }
+      &::after {
+        top: 0;
+      }
+      &::before {
+        bottom: 0;
+      }
+      img {
+        border-radius: 5px;
+      }
+    }
+    .slick-current {
+      #{$this} {
+        &__carousel {
+          &-block {
+            &::after, &::before {
+              opacity: 0;
+              visibility: hidden;
+            }
+          }
+        }
+      }
+    }
+    .slick {
+      &-prev {
+        left: 50%;
+        transform: translateX(-50%);
+        top: inherit;
+        bottom: 20px;
+        &::before {
+          width: 19px; 
+          height: 11px;
+          background: url('../images/sprite/css_sprites.png') -16px -22px;
+          opacity: 1;
+          content: '';
+          display: block;
+        }
+        &:hover {
+          &::before {
+            background-position: -35px -22px;
+          }
+        }
+      }
+      &-next {
+        right: 50%;
+        transform: translateX(50px);
+        top: inherit;
+        bottom: 20px;
+        &::before {
+          width: 34px; 
+          height: 11px;
+          background: url('../images/sprite/css_sprites.png') -0 -0;
+          opacity: 1;
+          content: '';
+          display: block;
+        }
+        &:hover {
+          &::before {
+            background-position: -0 -11px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -125,6 +216,9 @@
   }
   &__info {
     line-height: 1.4;
+  }
+  &--footer {
+    padding-bottom: 75px;
   }
 }
 
@@ -862,6 +956,231 @@
       height: 12px;
       background: url('../images/sprite/css_sprites.png') -15px -38px;
       margin: 7px 0 0 6px;
+    }
+  }
+}
+
+.breadcrumbs {
+  font-size: 12px;
+  margin-bottom: 40px;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      margin: 0 0 5px 0;
+      display: inline-block;
+      &::after {
+        content: '/';
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 5px;
+        vertical-align: -2px;
+      }
+      &>span, &>a {
+        display: inline-block;
+        color: #6f6f6f;
+      }
+      &>span {
+        color: $primary-color;
+      }
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.aside {
+  &__nav {
+    background: $color-white;
+    box-shadow: 0 8px 35px rgba($color-black,.1);
+    border-radius: 6px;
+    overflow: hidden;
+    font-weight: 500;
+    max-width: 470px;
+    margin: 0 auto 25px;
+    ul {
+      margin: 0;
+      padding: 10px 0;
+      li {
+        list-style: none;
+        margin: 0;
+        &>a, &>span {
+          display: block;
+          text-decoration: none;
+          color: $primary-color;
+          line-height: 1.6;
+          padding: 10px 20px;
+        }
+        &>a {
+          &:hover {
+            background: $color-1;
+          }
+        }
+        &.active {
+          &>a, &>span {
+            background: $color-1;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+  &__banner {
+    margin-bottom: 66px;
+    &-wrapper {
+      position: relative;
+      height: 260px;
+      border-radius: 6px;
+      background: #6eb747 url('../images/bg-2.png') 0 0 no-repeat;
+      .btn {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 0 0 $color-1, 0 0 0 5px $color-white;
+        &:hover {
+          box-shadow: 0 6px 15px rgba($color-1,.8), 0 0 0 5px $color-white;
+        }
+      }
+    }
+    &-title {
+      position: absolute;
+      font-size: 12px;
+      padding: 0 0 0 20px;
+      bottom: 45px;
+      max-width: 235px;
+      font-weight: 500;
+      line-height: 1.4;
+      b {
+        display: block;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.specialist {
+  padding-top: 10px;
+  $this: &;
+  &__block {
+    display: flex;
+    font-size: 14px;
+    width: 100%;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 30px;
+    position: relative;
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+    &+#{$this}__block {
+      margin-top: 25px;
+    }
+    &-title {
+      font-size: 26px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      small {
+        font-size: 18px;
+        display: block;
+        font-weight: 500;
+      }
+    }
+    &-content {
+      flex-grow: 1;
+      padding-left: 15px;
+      position: relative;
+      pointer-events: none;
+      p {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &.has-more {
+        height: 315px;
+        overflow: hidden;
+        &::after {
+          position: absolute;
+          bottom: 0;
+          color: $color-1;
+          content: 'Развернуть';
+          border-bottom: 1px dashed $color-1;
+          display: inline-block;
+          font-size: 12px;
+          pointer-events: all;
+          z-index: 5;
+          cursor: pointer;
+          &:hover {
+            border-bottom-color: transparent;
+          }
+        }
+        &::before {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          height: 85px;
+          background: linear-gradient(to top, $color-white 33%, rgba($color-white,0));
+          content: '';
+        }
+      }
+    }
+  }
+  &__thumb {
+    flex-shrink: 0;
+    width: 180px;
+    margin-top: 25px;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      margin-top: 125px;
+      margin-left: -1px;
+      top: 0;
+      left: 0;
+      background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MzQuNyA0MzQuOCI+ICA8cGF0aCBkPSJNMjYzLjMgNDMzLjNjLTcuOC0xLjUtMjAzLTY5LjYtMjEzLTc0LjNhODcuNyA4Ny43IDAgMCAxLTQ4LjgtOTVDMyAyNTUuNyA3MC42IDYxLjcgNzUuOSA1MC4zYTg3LjcgODcuNyAwIDAgMSA5NS00OC43YzguNCAxLjYgMjAyLjQgNjkuMSAyMTMuOCA3NC40YTg2LjUgODYuNSAwIDAgMSAzMS43IDI1LjRjNi4yIDguMiAxMy42IDIzLjEgMTYgMzIuNiAyLjYgMTAuMyAzIDI2IDEuMSAzNi4yLTEuNyA5LTY4LjkgMjAyLjUtNzQuNSAyMTQuNmE4Ny43IDg3LjcgMCAwIDEtOTUuNyA0OC42eiIgZmlsbD0iI2VhZWRlZiIvPjwvc3ZnPg==) no-repeat 0 0;
+      opacity: 0.3;
+    }
+    &-title {
+      border-left: 3px solid $color-1;
+      padding-top: 85px;
+      margin-top: -70px;
+      padding-left: 12px;
+      font-size: 12px;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 5;
+      font-weight: 500;
+      margin-left: 15px;
+      b {
+        display: block;
+        line-height: 1.4;
+        margin-top: 3px;
+      }
+    }
+    &-img {
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 27px;
+      transform: rotate(19deg);
+      position: relative;
+      z-index: 5;
+      margin-left: 15px;
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%) rotate(-19deg);
+        transform-origin: 50% 50%;
+        width: 200px;
+        object-fit: cover;
+      }
     }
   }
 }

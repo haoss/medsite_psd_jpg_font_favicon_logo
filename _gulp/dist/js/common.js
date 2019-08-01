@@ -116,9 +116,32 @@ $(document).on('ready', function(){
     ]
   });
 
+  $('.content__carousel').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '55px',
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          centerPadding: '80px'
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          centerMode: false,
+          centerPadding: '0px'
+        }
+      }
+    ]
+  });
+
   doctorsTab();
   inputFocus();
   mobileNav();
+  hasMore();
 
   // Chrome Smooth Scroll
   try {
@@ -315,4 +338,16 @@ function mobileNav() {
     }
   });
   
+}
+
+function hasMore() {
+  var link = $('.has-more');
+
+  link.each(function(){
+    var _this = $(this);
+
+    _this.on('click', function(){
+      _this.removeClass('has-more');
+    });
+  });
 }
