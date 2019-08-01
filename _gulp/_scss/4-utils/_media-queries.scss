@@ -248,6 +248,11 @@
   .specialist {
     margin-bottom: 10px;
   }
+  .document {
+    &__introtext {
+      font-size: 20px;
+    }
+  }
 }
 
 @media only (max-width: 991px) and (min-width: 768px) {
@@ -508,6 +513,13 @@
       font-size: 8px;
     }
   }
+  .aside {
+    &__banner {
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 @media only screen and (max-width: 599px) {
@@ -545,13 +557,7 @@
       }
     }
   }
-  .aside {
-    &__banner {
-      max-width: 350px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
+  
 }
 
 @media only screen and (max-width: 479px) {
