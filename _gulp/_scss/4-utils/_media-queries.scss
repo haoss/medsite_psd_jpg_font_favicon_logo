@@ -537,6 +537,20 @@
       margin-right: auto;
     }
   }
+  .content {
+    &__map {
+      // padding-top: 0;
+      background-position: top center;
+      margin-top: -80px;
+      &-top {
+        margin-bottom: 90px;
+      }
+      &-info {
+        float: none;
+        max-width: inherit;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 599px) {
@@ -739,6 +753,19 @@
         margin-bottom: 25px;
         &:last-of-type {
           margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .content {
+    &__map {
+      &-info {
+        padding: 20px;
+      }
+      &-body {
+        font-size: 13px;
+        ul {
+          columns: 2;
         }
       }
     }
