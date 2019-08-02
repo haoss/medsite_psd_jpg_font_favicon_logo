@@ -1,0 +1,107 @@
+doctype
+
+html(lang="ru")
+
+  -var pageTitle = 'Контакты' + ' - Наркопроф' //title страницы для генерации верстки
+  -var active = 'Контакты'
+  -var navigation = { 'Лечение алкоголизма':'#!', 'Лечение наркомании':'#!', 'Услуги':'#!', 'Лицензии':'#!', 'Статьи':'#!', 'Отзывы':'#!', 'Цены':'#!', 'Контакты':'#!'};
+
+  include ./_include/_head
+
+  body.body--all
+    // Preloader
+    include ./_include/_preloader
+
+    +mobileNav
+
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content.content--all
+        .container
+
+          .breadcrumbs
+            ul
+              li
+                a(href="#!") Центр помощи Наркопроф
+              li
+                a(href="#!") Название раздела
+              li
+                span Название страницы
+
+          h1 Контакты
+          p Если вы чувствуете, что Вы или ваш близкий человек не справляеся с ситуацией самостоятельно, звоните. Звоните как можно быстрее. Мы работаем круглосуточно, приезжаем сразу и оказываем необходимую помощь. При необходимости госпитализируем больного в стационар. Гарантируем анонимность.
+
+          .clear20
+
+          // Contact
+          .contact__wrapper
+            .contact__info
+              .contact__info-wrapper
+                p
+                  small.small Телефон горячей линии и вызова врача-нарколога:
+                  span.fs26 
+                    a(href="tel:") 8 (495) 
+                      b 229-30-58 
+                  small.small.fs14 (круглосуточно)
+                .clear30
+                p
+                  small.small E-mail:
+                  b
+                    a(href="mailto:") info@narcotism.ru
+                .clear30
+                p 
+                  small.small Адрес клиники ООО "Наркотизм"
+                  b г.Москва, Гостиничный проезд, 6 корп. 2
+            .contact__map
+              img(src="./tmp/contact-map.png", alt="").img-fluid
+
+          // Form
+          .contact__form
+            form(action="#!")
+              fieldset 
+                legend Горячая линия
+                p Мы ответим на любые Ваши вопросы и замечания в течение 30 минут
+
+                .contact__form-row
+                  div
+                    .form-group.has-error
+                      label.form-label.j-label(for="input1") Ваше имя
+                      input#input1(type="text" placeholder="").form-control.j-input
+                    .form-group
+                      label.form-label.j-label(for="input2") Телефон
+                      input#input2(type="text" placeholder="").form-control.j-input
+                  div
+                    .form-group
+                      label.form-label.j-label(for="input3") Город
+                      input#input3(type="text" placeholder="").form-control.j-input
+                    .form-group
+                      label.form-label.j-label(for="input4") Email
+                      input#input4(type="text" placeholder="").form-control.j-input
+                  div
+                    .form-group
+                      label.form-label.j-label(for="input5") Сообщение
+                      textarea#input5.form-control.j-input
+                
+                .row
+                  .col-auto
+                    label.form-checkbox
+                      input(type="checkbox")
+                      span.form-checkbox__span
+                      span.form-checkbox__label Согласен на обработку персональных данных
+                    p.contact__form-p
+                      img(src="./images/padlock.svg", width="15" height="15" alt="").contact__form-img
+                      | Ваши персональные данные не передаются третьим лицам
+                  .col.text-center.text-lg-right
+                    .d-lg-none
+                      .clear20
+                    button(type="submit" role="button").btn.btn--reverse отправить сообщение
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #fff")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

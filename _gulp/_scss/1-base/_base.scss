@@ -162,19 +162,6 @@ img, .img {
   padding: 0 15px;
 }
 
-/* text align */
-.text {
-  &-center, &--center {
-    text-align: center !important;
-  }
-  &-left, &--left {
-    text-align: left !important;
-  }
-  &-right, &--right {
-    text-align: right !important;
-  }
-}
-
 /* loader */
 .loader {
   width: 100%;

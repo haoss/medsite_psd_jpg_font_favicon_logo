@@ -1,0 +1,62 @@
+doctype
+
+html(lang="ru")
+
+  -var pageTitle = 'Лицензии' + ' - Наркопроф' //title страницы для генерации верстки
+  -var active = 'Лицензии'
+  -var navigation = { 'Лечение алкоголизма':'#!', 'Лечение наркомании':'#!', 'Услуги':'#!', 'Лицензии':'#!', 'Статьи':'#!', 'Отзывы':'#!', 'Цены':'#!', 'Контакты':'#!'};
+
+  include ./_include/_head
+
+  body.body--all
+    // Preloader
+    include ./_include/_preloader
+
+    +mobileNav
+
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content.content--all
+        .container
+
+          .breadcrumbs
+            ul
+              li
+                a(href="#!") Центр помощи Наркопроф
+              li
+                a(href="#!") Название раздела
+              li
+                span Название страницы
+
+          .row
+            .col-lg-8
+              section.content__document
+
+                h1 Лицензии
+                p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот.
+                .clear20
+
+                
+
+                .d-lg-none
+                  .clear60
+
+            .col-lg-4
+              aside.aside
+                +asideBanner
+
+                // Navigation
+                +asideNav
+
+      // Consultation
+      +consultationFooter
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #fff")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+
