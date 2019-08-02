@@ -1,0 +1,76 @@
+doctype
+
+html(lang="ru")
+
+  -var pageTitle = 'Отзывы' + ' - Наркопроф' //title страницы для генерации верстки
+  -var active = 'Отзывы'
+  -var navigation = { 'Лечение алкоголизма':'#!', 'Лечение наркомании':'#!', 'Услуги':'#!', 'Лицензии':'#!', 'Статьи':'#!', 'Отзывы':'#!', 'Цены':'#!', 'Контакты':'#!'};
+
+  include ./_include/_head
+
+  body.body--all
+    // Preloader
+    include ./_include/_preloader
+
+    +mobileNav
+
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content.content--all
+        .container
+
+          .breadcrumbs
+            ul
+              li
+                a(href="#!") Центр помощи Наркопроф
+              li
+                a(href="#!") Название раздела
+              li
+                span Название страницы
+
+          .row
+            .col-lg-8
+              section.content__document
+
+                h1 Отзывы
+                p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот.
+                .clear20
+
+                // Comments
+                .commenst
+                  - for (var i=0; i<4; i++) {
+                  .comments__block.comments__block--list
+                    .comments__block-wrapper
+                      p Доброго дня! Хочу выразить благодарность врачам клиники Наркотизм за возможность увидеть мир трезвыми глазами! Выпивать я начала ещё в студенчестве, пыталась не отстать от друзей. Не думала, что через 10 лет я  — женщина, мать настоящей  алкоголичкой. Пытала бросить самостоятельно, но…
+                      a(href="./tmp/comment-img.png" title="Анонимно, г. Москва").comments__block-img.image-popup
+                        img(src="./tmp/comment-img.png", alt="" width="170")
+                    .comments__block-name
+                      strong Анонимно, 
+                      | г. Москва
+                  - }
+
+                .text-center
+                  a(href="#!").btn.btn--md.btn--border Загрузить еще отзывы
+
+                .d-lg-none
+                  .clear60
+
+            .col-lg-4
+              aside.aside
+                +asideBanner
+
+                // Navigation
+                +asideNav
+
+      // Consultation
+      +consultationFooter
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #fff")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

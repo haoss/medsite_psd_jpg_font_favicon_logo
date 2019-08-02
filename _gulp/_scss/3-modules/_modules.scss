@@ -397,6 +397,24 @@
       line-height: 1.3;
       opacity: 0;
       transition: opacity 0.35s;
+      pointer-events: none;
+    }
+    &--list {
+      padding-top: 0;
+      opacity: 1;
+      margin-bottom: 35px;
+      #{$this} {
+        &__block {
+          &-name {
+            opacity: 1;
+          }
+          &-img {
+            img {
+              height: auto;
+            }
+          }
+        }
+      }
     }
   }
   &__nav {
@@ -1334,6 +1352,7 @@
           pointer-events: all;
           z-index: 5;
           cursor: pointer;
+          font-weight: 400;
           &:hover {
             border-bottom-color: transparent;
           }
