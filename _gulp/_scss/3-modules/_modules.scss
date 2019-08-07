@@ -540,6 +540,10 @@
       text-transform: uppercase;
       line-height: 1.2;
       margin-bottom: 20px;
+      a {
+        color: $primary-color;
+        text-decoration: none;
+      }
     }
     &-intro {
       line-height: 1.5;
@@ -584,6 +588,11 @@
             max-height: inherit;
             &::after {
               opacity: 0;
+            }
+          }
+          &-title {
+            a {
+              color: $color-white;
             }
           }
         }
@@ -1275,6 +1284,14 @@
       font-weight: bold;
       margin-bottom: 10px;
       line-height: 1.4;
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        pointer-events: all;
+        &:hover {
+          color: $color-1;
+        }
+      }
     }
     figcaption {
       border-left: 3px solid $color-1;
@@ -1326,6 +1343,13 @@
         li {
           list-style: none;
           margin: 0 0 13px 0;
+          a {
+            color: $primary-color;
+            text-decoration: none;
+            &:hover {
+              color: $color-1;
+            }
+          }
         }
       }
       &.has-more {

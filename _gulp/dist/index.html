@@ -41,7 +41,12 @@
                         </div>
                         <div class="form-group"> 
                             <label class="form-label j-label" for="input2">Телефон</label>
-                            <input class="form-control j-input" id="input2" type="text" placeholder="">
+                            <input class="form-control j-input phone-mask" id="input2" type="text" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-checkbox">
+                                <input type="checkbox"><span class="form-checkbox__span"></span><span class="form-checkbox__label">Согласен на обработку персональных данных</span>
+                            </label>
                         </div>
                     </fieldset>
                     <div class="text-center">
@@ -77,7 +82,7 @@
                     <div class="header__top">
                         <div class="header__logo"><img src="./images/logo.png" alt=""></div>
                         <div class="header__address"> <b>г. Москва,</b>Варшавское шоссе 58, корпус 2</div>
-                        <div class="header__btns"><a class="btn btn--md open-popup-link" href="#feedback">ВЫЗОВ ВРАЧА НАРКОЛОГА</a></div>
+                        <div class="header__btns"><a class="btn btn--md open-popup-link d-none d-sm-inline-block" href="#feedback">ВЫЗОВ ВРАЧА НАРКОЛОГА</a><a class="btn btn--md d-sm-none" href="tel:">позвонить в клинику</a></div>
                         <div class="header__phone"><a href="#!">8 (495) <b>229-30-58</b></a><span class="span">Бесплатная консультация</span></div>
                     </div>
                     <nav class="header__nav" role="navigation">
@@ -144,7 +149,7 @@
                             <div class="row">
                                 <div class="services__block">
                                     <div class="services__block-wrapper">
-                                        <div class="services__block-title">ВЫЗОВ НАРКОЛОГА</div>
+                                        <div class="services__block-title"><a href="#!">ВЫЗОВ НАРКОЛОГА</a></div>
                                         <div class="services__block-intro">Врача нарколога можно пригласить на дом. Это конфиденциальная услуга. Преимуществом данной процедуры является привычная домашняя обстановка, поддержка близки людей и комфорт для пациента. Врача нарколога можно пригласить на дом. Это конфиденциальная услуга. Преимуществом данной процедуры является привычная домашняя обстановка, поддержка близки людей и комфорт для пациента.</div>
                                         <div class="services__block-content">
                                             <div class="h5">Виды лечения:</div>
@@ -155,7 +160,7 @@
                                 </div>
                                 <div class="services__block">
                                     <div class="services__block-wrapper">
-                                        <div class="services__block-title">КОДИРОВАНИЕ ЗАВИСИМОСТЕЙ</div>
+                                        <div class="services__block-title"><a href="#!">КОДИРОВАНИЕ ЗАВИСИМОСТЕЙ</a></div>
                                         <div class="services__block-intro">Кодирование — эффективнейший метод лечения зависимостей. Когда не удается справиться с болезнью самостоятельно, тогда без помощи опытных профессионалов не обойтись.</div>
                                         <div class="services__block-content">
                                             <div class="h5">Виды лечения:</div>
@@ -165,7 +170,7 @@
                                 </div>
                                 <div class="services__block">
                                     <div class="services__block-wrapper">
-                                        <div class="services__block-title">СТАЦИОНАРНОЕ ЛЕЧЕНИЕ</div>
+                                        <div class="services__block-title"><a href="#!">СТАЦИОНАРНОЕ ЛЕЧЕНИЕ</a></div>
                                         <div class="services__block-intro">Лечение в стационаре обеспечивает максимально возможный эффект от лечения. Пациент находится под круглосуточным наблюдением профессионалов, в комфортных условиях.</div>
                                         <div class="services__block-content">
                                             <div class="h5">Виды лечения:</div>
@@ -175,7 +180,7 @@
                                 </div>
                                 <div class="services__block">
                                     <div class="services__block-wrapper">
-                                        <div class="services__block-title">реабилитация</div>
+                                        <div class="services__block-title"><a href="#!">реабилитация</a></div>
                                         <div class="services__block-intro">Этап реабилитации является заключительным процессом лечения. Только при качественно проведенной реабилитации можно говорить о надежном возврате человека к здоровому образу жизни.</div>
                                         <div class="services__block-content">
                                             <div class="h5">Виды лечения:</div>
@@ -185,7 +190,7 @@
                                 </div>
                                 <div class="services__block">
                                     <div class="services__block-wrapper">
-                                        <div class="services__block-title">поддержка</div>
+                                        <div class="services__block-title"><a href="#!">поддержка</a></div>
                                         <div class="services__block-intro">Психологическая помощь зависимым и его семье. Только при качественно проведенной реабилитации можно говорить о надежном возврате человека к здоровому образу жизни.</div>
                                         <div class="services__block-content">
                                             <div class="h5">Реабилитация возможна:</div>
@@ -557,6 +562,7 @@
         <script src="./js/libs/jquery.matchHeight-min.js"></script>
         <script src="./js/libs/slick/slick.min.js"></script>
         <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

@@ -358,9 +358,9 @@
 }
 
 @media only screen and (max-width: 767px) {
-  // .h1, h1 {
-  //   font-size: 32px;
-  // }
+  .h1, h1 {
+    font-size: 32px;
+  }
   .footer {
     &__contacts {
       margin-bottom: 20px;
@@ -712,8 +712,8 @@
       margin-bottom: 80px;
     }
     &__nav {
-      margin-left: -15px;
-      margin-right: -15px;
+      // margin-left: -15px;
+      // margin-right: -15px;
       max-width: inherit;
       margin-bottom: 25px;
       &-mobile {

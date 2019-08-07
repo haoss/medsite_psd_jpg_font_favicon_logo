@@ -41,7 +41,12 @@
                         </div>
                         <div class="form-group"> 
                             <label class="form-label j-label" for="input2">Телефон</label>
-                            <input class="form-control j-input" id="input2" type="text" placeholder="">
+                            <input class="form-control j-input phone-mask" id="input2" type="text" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-checkbox">
+                                <input type="checkbox"><span class="form-checkbox__span"></span><span class="form-checkbox__label">Согласен на обработку персональных данных</span>
+                            </label>
                         </div>
                     </fieldset>
                     <div class="text-center">
@@ -77,7 +82,7 @@
                     <div class="header__top">
                         <div class="header__logo"><img src="./images/logo.png" alt=""></div>
                         <div class="header__address"> <b>г. Москва,</b>Варшавское шоссе 58, корпус 2</div>
-                        <div class="header__btns"><a class="btn btn--md open-popup-link" href="#feedback">ВЫЗОВ ВРАЧА НАРКОЛОГА</a></div>
+                        <div class="header__btns"><a class="btn btn--md open-popup-link d-none d-sm-inline-block" href="#feedback">ВЫЗОВ ВРАЧА НАРКОЛОГА</a><a class="btn btn--md d-sm-none" href="tel:">позвонить в клинику</a></div>
                         <div class="header__phone"><a href="#!">8 (495) <b>229-30-58</b></a><span class="span">Бесплатная консультация</span></div>
                     </div>
                     <nav class="header__nav" role="navigation">
@@ -154,39 +159,39 @@
                                 </div>
                                 <div class="content__map-body has-more">
                                     <ul>
-                                        <li>Барвиха</li>
-                                        <li>Балашиха</li>
-                                        <li>Голицино</li>
-                                        <li>Высоковск</li>
-                                        <li>Волоколамск</li>
-                                        <li>Дзержинск</li>
-                                        <li>Долгопрудное</li>
-                                        <li>Егорьевск</li>
-                                        <li>Жуковский</li>
-                                        <li>Железнодорожный</li>
-                                        <li>Звенигород</li>
-                                        <li>Котельники</li>
-                                        <li>Кашира</li>
-                                        <li>Красноармейск</li>
-                                        <li>Красногорск</li>
-                                        <li>Лобно</li>
-                                        <li>Лыткарино</li>
-                                        <li>Люберцы</li>
-                                        <li>Монино</li>
-                                        <li>Нахабино</li>
-                                        <li>Ногинск</li>
-                                        <li>Одинцово</li>
-                                        <li>Подольск</li>
-                                        <li>Раменское</li>
-                                        <li>Реутов</li>
-                                        <li>Серпухов</li>
-                                        <li>Софрино</li>
-                                        <li>Ступино</li>
-                                        <li>Чехов</li>
-                                        <li>Черноголовка</li>
-                                        <li>Щелково</li>
-                                        <li>Щербинка</li>
-                                        <li>Электросталь</li>
+                                        <li><a href="#!">Барвиха</a></li>
+                                        <li><a href="#!">Балашиха</a></li>
+                                        <li><a href="#!">Голицино</a></li>
+                                        <li><a href="#!">Высоковск</a></li>
+                                        <li><a href="#!">Волоколамск</a></li>
+                                        <li><a href="#!">Дзержинск</a></li>
+                                        <li><a href="#!">Долгопрудное</a></li>
+                                        <li><a href="#!">Егорьевск</a></li>
+                                        <li><a href="#!">Жуковский</a></li>
+                                        <li><a href="#!">Железнодорожный</a></li>
+                                        <li><a href="#!">Звенигород</a></li>
+                                        <li><a href="#!">Котельники</a></li>
+                                        <li><a href="#!">Кашира</a></li>
+                                        <li><a href="#!">Красноармейск</a></li>
+                                        <li><a href="#!">Красногорск</a></li>
+                                        <li><a href="#!">Лобно</a></li>
+                                        <li><a href="#!">Лыткарино</a></li>
+                                        <li><a href="#!">Люберцы</a></li>
+                                        <li><a href="#!">Монино</a></li>
+                                        <li><a href="#!">Нахабино</a></li>
+                                        <li><a href="#!">Ногинск</a></li>
+                                        <li><a href="#!">Одинцово</a></li>
+                                        <li><a href="#!">Подольск</a></li>
+                                        <li><a href="#!">Раменское</a></li>
+                                        <li><a href="#!">Реутов</a></li>
+                                        <li><a href="#!">Серпухов</a></li>
+                                        <li><a href="#!">Софрино</a></li>
+                                        <li><a href="#!">Ступино</a></li>
+                                        <li><a href="#!">Чехов</a></li>
+                                        <li><a href="#!">Черноголовка</a></li>
+                                        <li><a href="#!">Щелково</a></li>
+                                        <li><a href="#!">Щербинка</a></li>
+                                        <li><a href="#!">Электросталь</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -297,6 +302,7 @@
         <script src="./js/libs/jquery.matchHeight-min.js"></script>
         <script src="./js/libs/slick/slick.min.js"></script>
         <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

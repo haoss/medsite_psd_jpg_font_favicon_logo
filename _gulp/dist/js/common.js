@@ -142,6 +142,7 @@ $(document).on('ready', function(){
   inputFocus();
   mobileNav();
   hasMore();
+  phoneMask();
 
   // Chrome Smooth Scroll
   try {
@@ -350,4 +351,11 @@ function hasMore() {
       _this.removeClass('has-more');
     });
   });
+}
+
+function phoneMask() {
+  var phone = $('.phone-mask');
+  phone.each(function () {
+    $(this).mask("+7 (999) 999-99-99");
+  })
 }
