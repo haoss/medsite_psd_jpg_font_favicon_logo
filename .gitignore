@@ -6,3 +6,4 @@ bower_components
 _design
 *.node
 *.orig
+_backup
